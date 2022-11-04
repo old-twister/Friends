@@ -57,6 +57,18 @@ class FriendsController < ApplicationController
     end
   end
 
+  def school
+    @friends = Friend.where(where_met: :school)
+  end
+
+  def work
+    @friends = Friend.where(where_met: :work)
+  end
+
+  def holiday
+    @friends = Friend.where(where_met: :holiday)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_friend

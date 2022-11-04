@@ -11,6 +11,19 @@
   </head>
 
   <body class="container">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Friends</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <%= link_to 'Home', root_path, class: ["nav-link", ('active' if current_page?(root_path))] %>
+          <%= link_to 'School', school_friends_path, class: ["nav-link", ('active' if current_page?(school_friends_path))] %>
+          <%= link_to 'Work', work_friends_path, class: ["nav-link", ('active' if current_page?(work_friends_path))] %>
+          <%= link_to 'Holiday', holiday_friends_path, class: ["nav-link", ('active' if current_page?(holiday_friends_path))] %>
+        </div>
+      </div>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>
