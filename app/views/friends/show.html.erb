@@ -1,10 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @friend %>
+<div id="friends", class="container-fluid">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>E-mail</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @friend.name %></td>
+        <td><%= @friend.surname %></td>
+        <td><%= @friend.email %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
-  <%= link_to "Back to friends", friends_path %>
-
-  <%= button_to "Destroy this friend", @friend, method: :delete %>
+  <%= link_to "Back to friends", friends_path, class: 'btn btn-outline-primary' %> | <%= link_to "Edit this friend", edit_friend_path(@friend), class: 'btn btn-outline-primary' %>
+  <%= button_to "Destroy this friend", @friend, method: :delete, class: 'btn btn-outline-danger' %>
 </div>
