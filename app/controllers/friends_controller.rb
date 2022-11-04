@@ -58,15 +58,15 @@ class FriendsController < ApplicationController
   end
 
   def school
-    @friends = Friend.where(where_met: :school)
+    @friends = Friend.school
   end
 
   def work
-    @friends = Friend.where(where_met: :work)
+    @friends = Friend.work
   end
 
   def holiday
-    @friends = Friend.where(where_met: :holiday)
+    @friends = Friend.holiday
   end
 
   private
