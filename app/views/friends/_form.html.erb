@@ -26,6 +26,11 @@
     <%= form.text_field :email, class: 'form-control' %>
   </div>
 
+  <div class="form-group">
+    <%= form.label :where_met, class: 'form-label' %>
+    <%= form.select :where_met, Friend.where_mets.keys, {include_blank: 'Select place where they met...'}, class: 'form-select' %>
+  </div>
+
   <div>
     <%= form.submit class: "btn btn-outline-success" %>
   </div>

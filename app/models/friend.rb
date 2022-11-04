@@ -2,4 +2,6 @@ class Friend < ApplicationRecord
   validates :name, presence: true
   validates :surname, presence: true
   validates :email, presence: true, confirmation: true, uniqueness: true
+
+  enum where_met: %i[other school work holiday party]
 end
