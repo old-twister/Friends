@@ -2,6 +2,7 @@ class Friend < ApplicationRecord
   validates :name, presence: true
   validates :surname, presence: true
   validates :email, presence: true, confirmation: true, uniqueness: true
+  validates :email, :email_format => { :message => "is not looking good" }
 
   enum where_met: %i[other school work holiday party]
 
