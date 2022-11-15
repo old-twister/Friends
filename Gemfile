@@ -16,6 +16,7 @@ gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem "bootsnap", require: false
 
 group :development, :test do
   gem 'brakeman', '~> 5.3', '>= 5.3.1'
@@ -26,11 +27,21 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
   #  gem 'validates_email_format_of'
+  gem 'faker', '~> 2.23'
 end
 
 group :development do
   gem 'annotate', '~> 3.2'
-  gem 'faker', '~> 2.23'
   gem 'hotwire-livereload'
   gem 'web-console'
+end
+
+
+group :test do
+  gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'database_cleaner-active_record'
+  gem 'rails-controller-testing'
+  gem 'capybara'
 end
