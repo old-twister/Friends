@@ -9,5 +9,4 @@ class Friend < ApplicationRecord
   scope :school, -> { where(where_met: :school) }
   scope :work, -> { where(where_met: :work) }
   scope :holiday, -> { where(where_met: :holiday) }
-
 end
